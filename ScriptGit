@@ -1,1 +1,29 @@
 This is a new file
+Code for git clone, create a file, add contain to it, git add, git commit, git push
+
+#!/bin/bash
+REPO_URL="https://github.com/Chaitanya-Admin/GitScript.git"
+CLONE_DIR="Script"
+FILE_NAME="ScriptGit"
+COMMIT_MESSAGE="Add $FILE_NAME"
+
+git clone $REPO_URL $CLONE_DIR
+
+cd $CLONE_DIR
+
+touch $FILE_NAME
+
+echo "This is a new file" > $FILE_NAME
+
+git add $FILE_NAME
+
+git commit -m "$COMMIT_MESSAGE"
+
+git push origin master
+
+echo "File '$FILE_NAME' has been added, committed, and pushed to the repository."
+:wq
+
+
+$ chmod +x GitScriptShell.sh
+$ ./GitScriptShell.sh
